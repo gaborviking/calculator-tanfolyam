@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Belső kalkulátor tanuló projekt</title>
+	<meta name="description" content="Belső kalkulátor tanuló projekt">
+
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+	<header>
+		<h1>Belső kalkulátor tanuló projekt</h1>
+	</header>
+
+	<main>
+
+		<section id="pages-section">
+			<fieldset>
+				<legend>Oldalszám</legend>
+
+				<label for="pages-1-4">
+					<input type="radio" id="pages-1-4" name="pages" value="1-4">
+					1–4 oldal
+				</label>
+
+				<label for="pages-5-9">
+					<input type="radio" id="pages-5-9" name="pages" value="5-9">
+					5–9 oldal
+				</label>
+
+				<label for="pages-10-20">
+					<input type="radio" id="pages-10-20" name="pages" value="10-20">
+					10–20 oldal
+				</label>
+
+				<label for="pages-20-plus">
+					<input type="radio" id="pages-20-plus" name="pages" value="20+">
+					20+ oldal
+				</label>
+			</fieldset>
+		</section>
+
+		<section id="content-section">
+			<fieldset>
+				<legend>Szöveges tartalom</legend>
+				<select id="content" name="content">
+					<option value="">Válassz egy opciót</option>
+					<option value="client">Ügyfél írja / meglévő szöveg</option>
+					<option value="agency">Mi írjuk a szöveget</option>
+				</select>
+			</fieldset>
+		</section>
+
+		<section id="extras-section">
+			<fieldset>
+				<legend>Opcionális fix áras kiegészítők</legend>
+
+				<label for="extra-design">
+					<input type="checkbox" id="extra-design" name="extras" value="design">
+					Arculat / design csomag
+				</label>
+
+				<label for="extra-multilingual">
+					<input type="checkbox" id="extra-multilingual" name="extras" value="multilingual">
+					Többnyelvűség (1 extra nyelv)
+				</label>
+			</fieldset>
+		</section>
+
+		<section id="multipliers-section">
+			<fieldset>
+				<legend>Belső szorzók</legend>
+
+				<label for="multiplier-overload">
+					<input type="checkbox" id="multiplier-overload" name="multipliers" value="overload">
+					Túlterheltség / csak felárral fér be
+				</label>
+
+				<label for="multiplier-urgent">
+					<input type="checkbox" id="multiplier-urgent" name="multipliers" value="urgent">
+					Sürgős határidő
+				</label>
+
+				<label for="multiplier-uncertainty">
+					<input type="checkbox" id="multiplier-uncertainty" name="multipliers" value="uncertainty">
+					Sok bizonytalanság
+				</label>
+
+				<label for="multiplier-portfolio">
+					<input type="checkbox" id="multiplier-portfolio" name="multipliers" value="portfolio">
+					Portfólió szempontból értékes
+				</label>
+
+				<label for="multiplier-flexible">
+					<input type="checkbox" id="multiplier-flexible" name="multipliers" value="flexible">
+					Rugalmas, nem sürgős projekt
+				</label>
+			</fieldset>
+		</section>
+
+		<section id="result-section">
+			<h2>Eredmény</h2>
+			<p>Oldalszám kategória: <span id="result-pages">-</span></p>
+			<p>Alapár: <span id="result-base-price">0 Ft</span></p>
+
+			<p>Hozzáadott tételek:</p>
+			<ul id="result-extras"></ul>
+
+			<p>Alkalmazott szorzók:</p>
+			<ul id="result-multipliers"></ul>
+
+			<h3>Végső nettó ár</h3>
+			<p id="final-price">0 Ft</p>
+		</section>
+
+		<section id="note-section">
+			<p>20+ oldal esetében további egyeztetés szükséges, nem árazható.</p>
+		</section>
+
+	</main>
+
+	<footer>
+		<p>© 2026</p>
+	</footer>
+
+</div>
+
+<script src="calculator.js"></script>
+
+</body>
+</html>
